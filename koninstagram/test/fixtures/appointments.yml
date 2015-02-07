@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  factory_id: 1
+  appoint_date: 2015-02-07
+  user_id: 1
+  customize_id: 1
+
+two:
+  factory_id: 1
+  appoint_date: 2015-02-07
+  user_id: 1
+  customize_id: 1
