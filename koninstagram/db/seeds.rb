@@ -17,3 +17,15 @@ User.create(:name => '松江花小')
 User.create(:name => '松江三郎')
 User.create(:name => '松江健太')
 User.create(:name => '松江小次郎')
+
+Color.create(name: 'red')
+Color.create(name: 'white')
+Color.create(name: 'blue')
+
+Material.create(name: 'kouzo')
+Material.create(name: 'ganpi')
+Material.create(name: 'mitumatagami')
+
+Waku.create(name: 'kiriotoshi')
+Waku.create(name: 'sonomamaiji')
+

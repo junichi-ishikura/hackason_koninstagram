@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Customizes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Material</th>
+      <th>Waku</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customizes.each do |customize| %>
+      <tr>
+        <td><%= customize.color %></td>
+        <td><%= customize.material %></td>
+        <td><%= customize.waku %></td>
+        <td><%= customize.user_id %></td>
+        <td><%= link_to 'Show', customize %></td>
+        <td><%= link_to 'Edit', edit_customize_path(customize) %></td>
+        <td><%= link_to 'Destroy', customize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customize', new_customize_path %>
