@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 5) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer  "factory_id"
+    t.date     "appoint_date"
+    t.integer  "user_id"
+    t.integer  "customize_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "colors", force: :cascade do |t|
     t.string   "name"
