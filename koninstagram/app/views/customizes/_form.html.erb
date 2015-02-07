@@ -1,0 +1,33 @@
+<%= form_for(@customize) do |f| %>
+  <% if @customize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@customize.errors.count, "error") %> prohibited this customize from being saved:</h2>
+
+      <ul>
+      <% @customize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= f.label :color %><br>
+    <%= f.select :color_id, @colors.map{|t| [t.name, t.id]} %>
+  </div>
+  <div class="field">
+    <%#= f.label :material %><br>
+    <%= f.select :material_id, @materials.map{|t| [t.name, t.id]} %>
+  </div>
+  <div class="field">
+    <%#= f.label :waku %><br>
+    <%= f.select :waku_id, @wakus.map{|t| [t.name, t.id]} %>
+  </div>
+  <div class="field">
+    <%#= f.label :user_id %><br>
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

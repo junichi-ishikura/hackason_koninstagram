@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Color.create(name: 'red')
+Color.create(name: 'white')
+Color.create(name: 'blue')
+Material.create(name: 'kouzo')
+Material.create(name: 'ganpi')
+Material.create(name: 'mitumatagami')
+Waku.create(name: 'kiriotoshi')
+Waku.create(name: 'sonomamaiji')
