@@ -17,11 +17,15 @@
     <%= f.collection_select(:factory_id,@factories,:id,:name) %>
 
   </div>
-  <div class="field">
-    <%= f.label :appoint_date %><br>
-    <%= f.date_select :appoint_date %>
-  </div>
+
+  
+  <div id="calendar"></div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+ $('#calendar').fullCalendar();
+</script>
