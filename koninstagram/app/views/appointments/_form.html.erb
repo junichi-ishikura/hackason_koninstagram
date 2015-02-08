@@ -10,19 +10,27 @@
       </ul>
     </div>
   <% end %>
+<br>
+<br>
+	<div class="container">
+	  <div class="row">
+	  	<div class="col-sm-3">
+  <div class="form-group">
+    <label for="appointment_factory_id">工房選択</label><br>
 
-  <div class="field">
-    <%= f.label :factory_id %><br>
+    <%= f.collection_select(:factory_id,@factories,:id,:name, {}, {:class => 'form-control'}) %>
 
-    <%= f.collection_select(:factory_id,@factories,:id,:name) %>
+  </div>	  		
+	  	</div>
+	  </div>
+	</div>
 
-  </div>
 
   
   <div id="calendar"></div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "予約確定", :class =>"btn btn-default"%>
   </div>
 <% end %>
 
