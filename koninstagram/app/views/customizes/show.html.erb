@@ -16,9 +16,10 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @customize.user_id %>
+  <%= image_tag('washi01.jpg', width:200) %>
+<!--   <strong>User:</strong>
+  <%= @customize.user_id %> -->
 </p>
 
-<%= link_to 'Edit', edit_customize_path(@customize) %> |
-<%= link_to 'Back', customizes_path %>
+<%= link_to '婚姻届一覧', customizes_path %> |
+<%= link_to '予約', appointments_path %>

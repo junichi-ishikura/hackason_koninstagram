@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Customizes</h1>
+<h1>婚姻届一覧</h1>
 
-<table>
+<!-- <table> -->
+<table class="table">
   <thead>
     <tr>
-      <th>Color</th>
-      <th>Material</th>
-      <th>Waku</th>
-      <th>User</th>
+      <th>色</th>
+      <th>素材</th>
+      <th>枠</th>
+      <th></th>
+      <!-- <th>User</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +18,14 @@
   <tbody>
     <% @customizes.each do |customize| %>
       <tr>
-        <td><%= customize.color %></td>
-        <td><%= customize.material %></td>
-        <td><%= customize.waku %></td>
-        <td><%= customize.user_id %></td>
-        <td><%= link_to 'Show', customize %></td>
-        <td><%= link_to 'Edit', edit_customize_path(customize) %></td>
-        <td><%= link_to 'Destroy', customize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= customize.color.name %></td>
+        <td><%= customize.material.name %></td>
+        <td><%= customize.waku.name %></td>
+        <td><%= image_tag('washi01.jpg',width:150) %></td>
+        <!-- <td><%= customize.user_id %></td> -->
+        <td><%= link_to '確認', customize %></td>
+<!--         <td><%= link_to 'Edit', edit_customize_path(customize) %></td> -->
+        <td><%= link_to '削除', customize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +33,5 @@
 
 <br>
 
-<%= link_to 'New Customize', new_customize_path %>
+<a href="/customizes/new" class="btn btn-default">婚姻届作成</a>
+<!-- <%= link_to '婚姻届作成', new_customize_path %> -->

@@ -11,23 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%#= f.label :color %><br>
-    <%= f.select :color_id, @colors.map{|t| [t.name, t.id]} %>
+
+  <div class="form-group">
+    <label for="customize_color_id">色</label>
+    <%= f.select :color_id, @colors.map{|t| [t.name, t.id]}, {}, {:class => 'form-control'} %>
   </div>
-  <div class="field">
-    <%#= f.label :material %><br>
-    <%= f.select :material_id, @materials.map{|t| [t.name, t.id]} %>
+
+  <div class="form-group">
+    <label for="customize_material_id">素材</label>
+    <%= f.select :material_id, @materials.map{|t| [t.name, t.id]}, {}, {:class => 'form-control'} %>
   </div>
-  <div class="field">
-    <%#= f.label :waku %><br>
-    <%= f.select :waku_id, @wakus.map{|t| [t.name, t.id]} %>
+
+  <div class="form-group">
+    <label for="customize_waku_id">枠</label>
+    <%= f.select :waku_id, @wakus.map{|t| [t.name, t.id]}, {}, {:class => 'form-control'} %>
   </div>
+
   <div class="field">
-    <%#= f.label :user_id %><br>
     <%= f.hidden_field :user_id %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "完了", :class =>"btn btn-default"%>
   </div>
 <% end %>
