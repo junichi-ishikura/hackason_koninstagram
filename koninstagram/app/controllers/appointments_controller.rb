@@ -15,10 +15,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    @factories = Factory.all
   end
 
   # GET /appointments/1/edit
   def edit
+       @factories = Factory.all
   end
 
   # POST /appointments
