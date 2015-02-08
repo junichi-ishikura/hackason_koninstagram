@@ -28,7 +28,6 @@ class CustomizesController < ApplicationController
   # POST /customizes
   # POST /customizes.json
   def create
-    binding.pry
     @customize = Customize.new(customize_params)
 
     respond_to do |format|
